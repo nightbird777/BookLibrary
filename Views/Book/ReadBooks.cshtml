@@ -1,0 +1,57 @@
+﻿
+
+
+
+
+<body id="BookViewPage">
+</body>
+
+<h1 class="display-3 text-center text-white"> Welcome to the Book Project! </h1>
+<br /> <br />
+
+
+<div class="export-tab">
+    <form action="/Book/ExportBookToCSV" method="post">
+        <button class="btn-info rounded">Export Book</button>
+    </form>
+</div>
+
+
+<div>
+    <form action="/Book/CreateAndUpdateBook" method="post">
+        <button class="btn-info rounded">Create New Book</button>
+    </form>
+</div>
+
+
+
+
+<table class="table table-bordered text-center">
+    <tr>
+        <td>Book ID</td>
+        <td>Title</td>
+        <td>Number of Pages</td>
+        <td>Date Created</td>
+        <td>Date Last Updated</td>
+        <td>Change</td>
+        <td>Delete</td>
+    </tr>
+    @foreach (Book bk in ViewBag.Book)
+    {
+        <tr>
+            <td>@bk.BookID</td>
+            <td>@bk.Title</td>
+            <td>@bk.NumberofPages</td>
+            <td>@bk.CreatedDate</td>
+            <td>@bk.UpdatedDate</td>
+
+            <td>
+                <button type="button" class="rounded-circle bg-info"
+                onclick="location.href = '/Book/CreateAndUpdateBook/?BookID=@bk.BookID'">Edit</button></td>
+
+            <td><button type="button" class="rounded-circle bg-info"onclick="if ( ConfirmDelete())
+                {location.href = '/Book/DeleteBook/?BookID=@bk.BookID';};">Remove</button></td>                                        
+        </tr>
+    }
+</table>
+

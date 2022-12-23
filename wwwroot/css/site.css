@@ -1,0 +1,54 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 0px;
+}
+
+#HomepageBody {
+    background-image: url('/Images/Bd.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.tabColor{
+    color:black;
+    background-color:#51A0;
+    border:hidden;
+}
+
+.position{
+    position:absolute;
+    margin-top:5%;
+    margin-left:40%;
+}
+
+#BookViewPage {
+    background-image: url('/Images/Sky.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.export-tab{
+    position:absolute;
+    margin-top:0px;
+    margin-left:140px;
+}
