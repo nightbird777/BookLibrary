@@ -19,9 +19,9 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                        @*<li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Welcome!!!</a>
-                        </li>
+                        </li>*@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="ReadBooks">Get All Books</a>
                         </li>
@@ -38,7 +38,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - BookLibrary - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <strong>&copy; 2022 - BookLibrary</strong> - <a asp-area="" asp-controller="Book" asp-action="ExportBookToCSV">Export Book as CSV format</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
