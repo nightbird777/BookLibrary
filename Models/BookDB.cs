@@ -6,6 +6,7 @@ namespace BookLibrary.Models
     public class BookDB
     {
         private string connectionString = ("server=nyctotampa; database=personal; user id=raju; password=raju123");
+        //private string connectionString = ("server=KHALIFABUILD202; database=personal; user id=raju; password=raju123");
         public List<Book> getAllBooks()
         {
             List<Book> books = new List<Book>();
